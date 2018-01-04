@@ -19,7 +19,7 @@ int main()
                 ++eCnt;
                 break;
             case 'i':
-                if (prech == 'f') ++fiCnt;
+                if (prech == 'f') ++fiCnt,prech='\0';
             case 'I':
                 ++iCnt;
                 break;
@@ -41,10 +41,11 @@ int main()
                 ++newLineCnt;
                 break;
             case 'f':
-                if (prech == 'f') ++ffCnt;
+                if (prech == 'f') ++ffCnt,prech='\0';
+                else prech='f';
                 break;
             case 'l':
-                if (prech == 'f') ++flCnt;
+                if (prech == 'f') ++flCnt,prech='\0';
                 break;
         }
         prech = ch;
